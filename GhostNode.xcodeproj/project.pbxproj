@@ -1,0 +1,827 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 100;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FAF7C6E41F4E01186561730 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C09FBD4BC6B300601B66A7F /* Cocoa.framework */; };
+		2E09203B9145D1742EC0EA44 /* GhostNodeShared in Frameworks */ = {isa = PBXBuildFile; productRef = B5C1B6E6AE89E69F37FCD384 /* GhostNodeShared */; };
+		3F5AD5549558270E6992D65E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B56C5B4289CB4DC67CB0DD /* Foundation.framework */; };
+		46F5D9F22FB63AB700E6A44E /* FlyingFox in Frameworks */ = {isa = PBXBuildFile; productRef = 46F5D9F12FB63AB700E6A44E /* FlyingFox */; };
+		46F5D9F42FB645AA00E6A44E /* GhostLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 46F5D9F32FB645AA00E6A44E /* GhostLayer */; };
+		85ADAAA1284461C8B6D85FB6 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC580E328BACF889E744F73 /* ShareViewController.swift */; };
+		962B9939AF2F41FFCC61F253 /* GhostNodeShare.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3C773BB5774D27FB23BE49BA /* GhostNodeShare.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		97B660ADD89D1BAEA1DB61A7 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61B7278B9A9D12094DB7EA /* ShareViewController.swift */; };
+		B6FF602B7FE9605934E88A74 /* GhostNodeShareMac.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F7BA14CE251197F5963D3A51 /* GhostNodeShareMac.appex */; platformFilters = (macos, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BEF416E76DC7E1BDEC3A946F /* GhostNodeShared in Frameworks */ = {isa = PBXBuildFile; productRef = 48D06FF8B2E0259FE7E0B637 /* GhostNodeShared */; };
+		F39932B27ECF847918875D91 /* GhostNodeShared in Frameworks */ = {isa = PBXBuildFile; productRef = DDE1D5FE4BFC2147B0CE096B /* GhostNodeShared */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E611D3B3A48944382630B22E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 461217A92F4B8A1200574ABB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96F2B3D1D0FD8CDEFFBEEF4D;
+			remoteInfo = GhostNodeShare;
+		};
+		F06E80CA30D62601F0EA7ACB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 461217A92F4B8A1200574ABB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35826AF56C127C5D35C2C2BE;
+			remoteInfo = GhostNodeShareMac;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2291D446DE3903C509AB8A3D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				962B9939AF2F41FFCC61F253 /* GhostNodeShare.appex in Embed Foundation Extensions */,
+				B6FF602B7FE9605934E88A74 /* GhostNodeShareMac.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0FC580E328BACF889E744F73 /* ShareViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		2C09FBD4BC6B300601B66A7F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		2CF32C9CE8BFCE09E41CCA3B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C773BB5774D27FB23BE49BA /* GhostNodeShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GhostNodeShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		44B56C5B4289CB4DC67CB0DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		461217B12F4B8A1200574ABB /* GhostNode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhostNode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A164F887F31DB6D34448216 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97268B3902E9805284C4E54D /* GhostNodeShareMac.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = GhostNodeShareMac.entitlements; sourceTree = "<group>"; };
+		9A61B7278B9A9D12094DB7EA /* ShareViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		CF35376DAF95AA8117E0F0EF /* GhostNodeShare.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = GhostNodeShare.entitlements; sourceTree = "<group>"; };
+		F7BA14CE251197F5963D3A51 /* GhostNodeShareMac.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GhostNodeShareMac.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		46AAAA012F4B8A1200574ABB /* Exceptions for "GhostNode" folder in "GhostNode" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/Info.plist,
+			);
+			target = 461217B02F4B8A1200574ABB /* GhostNode */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		461217B32F4B8A1200574ABB /* GhostNode */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				46AAAA012F4B8A1200574ABB /* Exceptions for "GhostNode" folder in "GhostNode" target */,
+			);
+			path = GhostNode;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26C577643E108930956F1ED5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				3F5AD5549558270E6992D65E /* Foundation.framework in Frameworks */,
+				F39932B27ECF847918875D91 /* GhostNodeShared in Frameworks */,
+			);
+		};
+		461217AE2F4B8A1200574ABB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				46F5D9F42FB645AA00E6A44E /* GhostLayer in Frameworks */,
+				46F5D9F22FB63AB700E6A44E /* FlyingFox in Frameworks */,
+				2E09203B9145D1742EC0EA44 /* GhostNodeShared in Frameworks */,
+			);
+		};
+		C2C7F2EF44B6DBA2E0D980A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				1FAF7C6E41F4E01186561730 /* Cocoa.framework in Frameworks */,
+				BEF416E76DC7E1BDEC3A946F /* GhostNodeShared in Frameworks */,
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F1BB9DA57F33291EB90E3F9 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				2C09FBD4BC6B300601B66A7F /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		461217A82F4B8A1200574ABB = {
+			isa = PBXGroup;
+			children = (
+				461217B32F4B8A1200574ABB /* GhostNode */,
+				46760E482F942A3C00578335 /* Frameworks */,
+				461217B22F4B8A1200574ABB /* Products */,
+				9824ED8F3E07BF8CB74FD907 /* GhostNodeShare */,
+				72E7C8CB739427F21EB72E52 /* GhostNodeShareMac */,
+			);
+			sourceTree = "<group>";
+		};
+		461217B22F4B8A1200574ABB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				461217B12F4B8A1200574ABB /* GhostNode.app */,
+				3C773BB5774D27FB23BE49BA /* GhostNodeShare.appex */,
+				F7BA14CE251197F5963D3A51 /* GhostNodeShareMac.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46760E482F942A3C00578335 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B16B6DB55C1D8C7A0A810DA /* iOS */,
+				1F1BB9DA57F33291EB90E3F9 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B16B6DB55C1D8C7A0A810DA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				44B56C5B4289CB4DC67CB0DD /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		72E7C8CB739427F21EB72E52 /* GhostNodeShareMac */ = {
+			isa = PBXGroup;
+			children = (
+				0FC580E328BACF889E744F73 /* ShareViewController.swift */,
+				2CF32C9CE8BFCE09E41CCA3B /* Info.plist */,
+				97268B3902E9805284C4E54D /* GhostNodeShareMac.entitlements */,
+			);
+			path = GhostNodeShareMac;
+			sourceTree = "<group>";
+		};
+		9824ED8F3E07BF8CB74FD907 /* GhostNodeShare */ = {
+			isa = PBXGroup;
+			children = (
+				9A61B7278B9A9D12094DB7EA /* ShareViewController.swift */,
+				8A164F887F31DB6D34448216 /* Info.plist */,
+				CF35376DAF95AA8117E0F0EF /* GhostNodeShare.entitlements */,
+			);
+			path = GhostNodeShare;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		35826AF56C127C5D35C2C2BE /* GhostNodeShareMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F75EFE6AC55D3452BF945E4 /* Build configuration list for PBXNativeTarget "GhostNodeShareMac" */;
+			buildPhases = (
+				E2FEC46D861ADF23AAAE0056 /* Sources */,
+				C2C7F2EF44B6DBA2E0D980A4 /* Frameworks */,
+				1F50393608B8A5233B5F5D83 /* Resources */,
+			);
+			buildRules = (
+			);
+			name = GhostNodeShareMac;
+			packageProductDependencies = (
+				48D06FF8B2E0259FE7E0B637 /* GhostNodeShared */,
+			);
+			productName = GhostNodeShareMac;
+			productReference = F7BA14CE251197F5963D3A51 /* GhostNodeShareMac.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		461217B02F4B8A1200574ABB /* GhostNode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 461217BC2F4B8A1200574ABB /* Build configuration list for PBXNativeTarget "GhostNode" */;
+			buildPhases = (
+				461217AD2F4B8A1200574ABB /* Sources */,
+				461217AE2F4B8A1200574ABB /* Frameworks */,
+				461217AF2F4B8A1200574ABB /* Resources */,
+				2291D446DE3903C509AB8A3D /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC1E74F10C07C719BAF9B89E /* PBXTargetDependency */,
+				C3C4C2EA8A3A8F8C2226AAD8 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				461217B32F4B8A1200574ABB /* GhostNode */,
+			);
+			name = GhostNode;
+			packageProductDependencies = (
+				46F5D9F12FB63AB700E6A44E /* FlyingFox */,
+				46F5D9F32FB645AA00E6A44E /* GhostLayer */,
+				B5C1B6E6AE89E69F37FCD384 /* GhostNodeShared */,
+			);
+			productName = GhostNode;
+			productReference = 461217B12F4B8A1200574ABB /* GhostNode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96F2B3D1D0FD8CDEFFBEEF4D /* GhostNodeShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 629E142CCDA816E1DDD5D065 /* Build configuration list for PBXNativeTarget "GhostNodeShare" */;
+			buildPhases = (
+				9208FF46C90345D69E38A8FF /* Sources */,
+				26C577643E108930956F1ED5 /* Frameworks */,
+				C10F0BBC7C1D3896B0C945ED /* Resources */,
+			);
+			buildRules = (
+			);
+			name = GhostNodeShare;
+			packageProductDependencies = (
+				DDE1D5FE4BFC2147B0CE096B /* GhostNodeShared */,
+			);
+			productName = GhostNodeShare;
+			productReference = 3C773BB5774D27FB23BE49BA /* GhostNodeShare.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		461217A92F4B8A1200574ABB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					461217B02F4B8A1200574ABB = {
+						CreatedOnToolsVersion = 26.2;
+					};
+				};
+			};
+			buildConfigurationList = 461217AC2F4B8A1200574ABB /* Build configuration list for PBXProject "GhostNode" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				de,
+				ja,
+				fr,
+				es,
+				"zh-Hans",
+				Base,
+			);
+			mainGroup = 461217A82F4B8A1200574ABB;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				461217BF2F4B907E00574ABB /* XCRemoteSwiftPackageReference "FlyingFox" */,
+				46F5D9F02FB63A7700E6A44E /* XCRemoteSwiftPackageReference "ghost_layer" */,
+				51A3E3AD477E1AAC0146B623 /* XCLocalSwiftPackageReference "Packages/GhostNodeShared" */,
+			);
+			preferredProjectObjectVersion = 100;
+			productRefGroup = 461217B22F4B8A1200574ABB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				461217B02F4B8A1200574ABB /* GhostNode */,
+				96F2B3D1D0FD8CDEFFBEEF4D /* GhostNodeShare */,
+				35826AF56C127C5D35C2C2BE /* GhostNodeShareMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F50393608B8A5233B5F5D83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		461217AF2F4B8A1200574ABB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		C10F0BBC7C1D3896B0C945ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		461217AD2F4B8A1200574ABB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		9208FF46C90345D69E38A8FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				97B660ADD89D1BAEA1DB61A7 /* ShareViewController.swift in Sources */,
+			);
+		};
+		E2FEC46D861ADF23AAAE0056 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				85ADAAA1284461C8B6D85FB6 /* ShareViewController.swift in Sources */,
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3C4C2EA8A3A8F8C2226AAD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GhostNodeShareMac;
+			platformFilters = (
+				macos,
+			);
+			target = 35826AF56C127C5D35C2C2BE /* GhostNodeShareMac */;
+			targetProxy = F06E80CA30D62601F0EA7ACB /* PBXContainerItemProxy */;
+		};
+		CC1E74F10C07C719BAF9B89E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GhostNodeShare;
+			platformFilter = ios;
+			target = 96F2B3D1D0FD8CDEFFBEEF4D /* GhostNodeShare */;
+			targetProxy = E611D3B3A48944382630B22E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		34D94E2773D24FB3565228A1 /* Debug configuration for PBXNativeTarget "GhostNodeShareMac" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_ENTITLEMENTS = GhostNodeShareMac/GhostNodeShareMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V5C6Q86XJR;
+				ENABLE_DEBUG_DYLIB = NO;
+				ENABLE_DEBUG_DYLIB_OVERRIDE = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = NO;
+				ENABLE_XOJIT_PREVIEWS = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = GhostNodeShareMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.autumnal.ghostnode.share-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		3A7F8252C042CC44436561A7 /* Release configuration for PBXNativeTarget "GhostNodeShare" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = GhostNodeShare/GhostNodeShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V5C6Q86XJR;
+				ENABLE_DEBUG_DYLIB = NO;
+				ENABLE_DEBUG_DYLIB_OVERRIDE = NO;
+				ENABLE_PREVIEWS = NO;
+				ENABLE_XOJIT_PREVIEWS = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = GhostNodeShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.autumnal.ghostnode.share;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		461217BA2F4B8A1200574ABB /* Debug configuration for PBXProject "GhostNode" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = V5C6Q86XJR;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		461217BB2F4B8A1200574ABB /* Release configuration for PBXProject "GhostNode" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = V5C6Q86XJR;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		461217BD2F4B8A1200574ABB /* Debug configuration for PBXNativeTarget "GhostNode" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = GhostNode/Resources/GhostNode.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = V5C6Q86XJR;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = V5C6Q86XJR;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = YES;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GhostNode/Resources/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.autumnal.ghostnode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "GhostNode iOS Development";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "GhostNode macOS Development";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 15.6;
+			};
+			name = Debug;
+		};
+		461217BE2F4B8A1200574ABB /* Release configuration for PBXNativeTarget "GhostNode" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = GhostNode/Resources/GhostNode.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V5C6Q86XJR;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = YES;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GhostNode/Resources/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.autumnal.ghostnode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 15.6;
+			};
+			name = Release;
+		};
+		90C5AA8B085748CC423B37D5 /* Debug configuration for PBXNativeTarget "GhostNodeShare" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = GhostNodeShare/GhostNodeShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V5C6Q86XJR;
+				ENABLE_DEBUG_DYLIB = NO;
+				ENABLE_DEBUG_DYLIB_OVERRIDE = NO;
+				ENABLE_PREVIEWS = NO;
+				ENABLE_XOJIT_PREVIEWS = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = GhostNodeShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.autumnal.ghostnode.share;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A28688F40CCE0D43EC4EA11B /* Release configuration for PBXNativeTarget "GhostNodeShareMac" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_ENTITLEMENTS = GhostNodeShareMac/GhostNodeShareMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V5C6Q86XJR;
+				ENABLE_DEBUG_DYLIB = NO;
+				ENABLE_DEBUG_DYLIB_OVERRIDE = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = NO;
+				ENABLE_XOJIT_PREVIEWS = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = GhostNodeShareMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.autumnal.ghostnode.share-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		461217AC2F4B8A1200574ABB /* Build configuration list for PBXProject "GhostNode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				461217BA2F4B8A1200574ABB /* Debug configuration for PBXProject "GhostNode" */,
+				461217BB2F4B8A1200574ABB /* Release configuration for PBXProject "GhostNode" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		461217BC2F4B8A1200574ABB /* Build configuration list for PBXNativeTarget "GhostNode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				461217BD2F4B8A1200574ABB /* Debug configuration for PBXNativeTarget "GhostNode" */,
+				461217BE2F4B8A1200574ABB /* Release configuration for PBXNativeTarget "GhostNode" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		4F75EFE6AC55D3452BF945E4 /* Build configuration list for PBXNativeTarget "GhostNodeShareMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A28688F40CCE0D43EC4EA11B /* Release configuration for PBXNativeTarget "GhostNodeShareMac" */,
+				34D94E2773D24FB3565228A1 /* Debug configuration for PBXNativeTarget "GhostNodeShareMac" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		629E142CCDA816E1DDD5D065 /* Build configuration list for PBXNativeTarget "GhostNodeShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A7F8252C042CC44436561A7 /* Release configuration for PBXNativeTarget "GhostNodeShare" */,
+				90C5AA8B085748CC423B37D5 /* Debug configuration for PBXNativeTarget "GhostNodeShare" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		51A3E3AD477E1AAC0146B623 /* XCLocalSwiftPackageReference "Packages/GhostNodeShared" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/GhostNodeShared;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		461217BF2F4B907E00574ABB /* XCRemoteSwiftPackageReference "FlyingFox" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swhitty/FlyingFox";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.26.2;
+			};
+		};
+		46F5D9F02FB63A7700E6A44E /* XCRemoteSwiftPackageReference "ghost_layer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sevenautumns/ghost_layer";
+			requirement = {
+				kind = exactVersion;
+				version = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		46F5D9F12FB63AB700E6A44E /* FlyingFox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 461217BF2F4B907E00574ABB /* XCRemoteSwiftPackageReference "FlyingFox" */;
+			productName = FlyingFox;
+		};
+		46F5D9F32FB645AA00E6A44E /* GhostLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46F5D9F02FB63A7700E6A44E /* XCRemoteSwiftPackageReference "ghost_layer" */;
+			productName = GhostLayer;
+		};
+		48D06FF8B2E0259FE7E0B637 /* GhostNodeShared */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A3E3AD477E1AAC0146B623 /* XCLocalSwiftPackageReference "Packages/GhostNodeShared" */;
+			productName = GhostNodeShared;
+		};
+		B5C1B6E6AE89E69F37FCD384 /* GhostNodeShared */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A3E3AD477E1AAC0146B623 /* XCLocalSwiftPackageReference "Packages/GhostNodeShared" */;
+			productName = GhostNodeShared;
+		};
+		DDE1D5FE4BFC2147B0CE096B /* GhostNodeShared */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A3E3AD477E1AAC0146B623 /* XCLocalSwiftPackageReference "Packages/GhostNodeShared" */;
+			productName = GhostNodeShared;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 461217A92F4B8A1200574ABB /* Project object */;
+}

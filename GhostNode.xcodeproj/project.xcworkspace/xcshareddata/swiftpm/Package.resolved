@@ -1,0 +1,24 @@
+{
+  "originHash" : "5b4114f1160740c20a88e88250e145643d8d97eb8ece3fb373171d3af2e2404d",
+  "pins" : [
+    {
+      "identity" : "flyingfox",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swhitty/FlyingFox",
+      "state" : {
+        "revision" : "de38230104cf63ef4843cb569ba11c13f8165685",
+        "version" : "0.26.2"
+      }
+    },
+    {
+      "identity" : "ghost_layer",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sevenautumns/ghost_layer",
+      "state" : {
+        "revision" : "2e0b1f34a2599889c0ba4afee27f030d5646161d",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}
