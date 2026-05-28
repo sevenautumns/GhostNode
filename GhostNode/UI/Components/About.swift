@@ -17,10 +17,10 @@ struct AboutLogo: View {
         #if os(macOS)
             .focusable(false)
         #endif
-        .accessibilityLabel("About GhostNode")
-        .sheet(isPresented: $isPresented) {
-            AboutSheet()
-        }
+            .accessibilityLabel("About GhostNode")
+            .sheet(isPresented: $isPresented) {
+                AboutSheet()
+            }
     }
 }
 
@@ -40,7 +40,7 @@ struct AboutSheet: View {
             content
         }
         #if os(macOS)
-            .frame(width: 380, height: 460)
+        .frame(width: 380, height: 460)
         #endif
     }
 
