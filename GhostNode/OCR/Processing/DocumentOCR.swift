@@ -14,6 +14,7 @@ nonisolated enum DocumentOCR {
         var request = RecognizeDocumentsRequest()
         request.textRecognitionOptions.automaticallyDetectLanguage = true
         request.setPreferredRecognitionLanguages()
+        request.textRecognitionOptions.minimumTextHeightFraction = 0.005
         request.textRecognitionOptions.useLanguageCorrection = true
 
         do {
@@ -32,6 +33,7 @@ nonisolated enum DocumentOCR {
 
         let request = VNRecognizeTextRequest()
         request.setPreferredRecognitionLanguages()
+        request.minimumTextHeight = 0.005
         request.usesLanguageCorrection = true
 
         let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
