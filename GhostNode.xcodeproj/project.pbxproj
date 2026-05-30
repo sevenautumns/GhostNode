@@ -10,8 +10,8 @@
 		1FAF7C6E41F4E01186561730 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C09FBD4BC6B300601B66A7F /* Cocoa.framework */; };
 		2E09203B9145D1742EC0EA44 /* GhostNodeShared in Frameworks */ = {isa = PBXBuildFile; productRef = B5C1B6E6AE89E69F37FCD384 /* GhostNodeShared */; };
 		3F5AD5549558270E6992D65E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B56C5B4289CB4DC67CB0DD /* Foundation.framework */; };
+		4607E3012FCAEEB300C979BC /* GhostLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 4607E3002FCAEEB300C979BC /* GhostLayer */; };
 		46F5D9F22FB63AB700E6A44E /* FlyingFox in Frameworks */ = {isa = PBXBuildFile; productRef = 46F5D9F12FB63AB700E6A44E /* FlyingFox */; };
-		46F5D9F42FB645AA00E6A44E /* GhostLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 46F5D9F32FB645AA00E6A44E /* GhostLayer */; };
 		85ADAAA1284461C8B6D85FB6 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC580E328BACF889E744F73 /* ShareViewController.swift */; };
 		962B9939AF2F41FFCC61F253 /* GhostNodeShare.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3C773BB5774D27FB23BE49BA /* GhostNodeShare.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		97B660ADD89D1BAEA1DB61A7 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61B7278B9A9D12094DB7EA /* ShareViewController.swift */; };
@@ -96,7 +96,7 @@
 		461217AE2F4B8A1200574ABB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
-				46F5D9F42FB645AA00E6A44E /* GhostLayer in Frameworks */,
+				4607E3012FCAEEB300C979BC /* GhostLayer in Frameworks */,
 				46F5D9F22FB63AB700E6A44E /* FlyingFox in Frameworks */,
 				2E09203B9145D1742EC0EA44 /* GhostNodeShared in Frameworks */,
 			);
@@ -219,8 +219,8 @@
 			name = GhostNode;
 			packageProductDependencies = (
 				46F5D9F12FB63AB700E6A44E /* FlyingFox */,
-				46F5D9F32FB645AA00E6A44E /* GhostLayer */,
 				B5C1B6E6AE89E69F37FCD384 /* GhostNodeShared */,
+				4607E3002FCAEEB300C979BC /* GhostLayer */,
 			);
 			productName = GhostNode;
 			productReference = 461217B12F4B8A1200574ABB /* GhostNode.app */;
@@ -275,8 +275,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				461217BF2F4B907E00574ABB /* XCRemoteSwiftPackageReference "FlyingFox" */,
-				46F5D9F02FB63A7700E6A44E /* XCRemoteSwiftPackageReference "ghost_layer" */,
 				51A3E3AD477E1AAC0146B623 /* XCLocalSwiftPackageReference "Packages/GhostNodeShared" */,
+				4607E2FF2FCAEEB300C979BC /* XCRemoteSwiftPackageReference "ghost_layer" */,
 			);
 			preferredProjectObjectVersion = 100;
 			productRefGroup = 461217B22F4B8A1200574ABB /* Products */;
@@ -353,7 +353,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = GhostNodeShareMac/GhostNodeShareMac.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = V5C6Q86XJR;
 				ENABLE_DEBUG_DYLIB = NO;
@@ -369,7 +369,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.autumnal.ghostnode.share-mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -388,7 +388,7 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ENTITLEMENTS = GhostNodeShare/GhostNodeShare.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = V5C6Q86XJR;
 				ENABLE_DEBUG_DYLIB = NO;
 				ENABLE_DEBUG_DYLIB_OVERRIDE = NO;
@@ -402,7 +402,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = de.autumnal.ghostnode.share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -552,7 +552,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = V5C6Q86XJR;
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = V5C6Q86XJR;
@@ -585,7 +585,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = de.autumnal.ghostnode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -616,7 +616,7 @@
 				CODE_SIGN_ENTITLEMENTS = GhostNode/Resources/GhostNode.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = V5C6Q86XJR;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -647,7 +647,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = de.autumnal.ghostnode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -673,7 +673,7 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ENTITLEMENTS = GhostNodeShare/GhostNodeShare.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = V5C6Q86XJR;
 				ENABLE_DEBUG_DYLIB = NO;
 				ENABLE_DEBUG_DYLIB_OVERRIDE = NO;
@@ -687,7 +687,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = de.autumnal.ghostnode.share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -705,7 +705,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = GhostNodeShareMac/GhostNodeShareMac.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = V5C6Q86XJR;
 				ENABLE_DEBUG_DYLIB = NO;
@@ -721,7 +721,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.autumnal.ghostnode.share-mac";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -779,6 +779,14 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4607E2FF2FCAEEB300C979BC /* XCRemoteSwiftPackageReference "ghost_layer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sevenautumns/ghost_layer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
 		461217BF2F4B907E00574ABB /* XCRemoteSwiftPackageReference "FlyingFox" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/swhitty/FlyingFox";
@@ -787,26 +795,18 @@
 				minimumVersion = 0.26.2;
 			};
 		};
-		46F5D9F02FB63A7700E6A44E /* XCRemoteSwiftPackageReference "ghost_layer" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sevenautumns/ghost_layer";
-			requirement = {
-				kind = exactVersion;
-				version = 0.1.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4607E3002FCAEEB300C979BC /* GhostLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4607E2FF2FCAEEB300C979BC /* XCRemoteSwiftPackageReference "ghost_layer" */;
+			productName = GhostLayer;
+		};
 		46F5D9F12FB63AB700E6A44E /* FlyingFox */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 461217BF2F4B907E00574ABB /* XCRemoteSwiftPackageReference "FlyingFox" */;
 			productName = FlyingFox;
-		};
-		46F5D9F32FB645AA00E6A44E /* GhostLayer */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 46F5D9F02FB63A7700E6A44E /* XCRemoteSwiftPackageReference "ghost_layer" */;
-			productName = GhostLayer;
 		};
 		48D06FF8B2E0259FE7E0B637 /* GhostNodeShared */ = {
 			isa = XCSwiftPackageProductDependency;

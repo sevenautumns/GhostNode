@@ -104,15 +104,30 @@ nonisolated enum OCROverlayService {
         to url: URL,
         progress: OCRProgressHandler? = nil
     ) async throws {
-        let builder = OcrDocBuilder()
+        var pageJSON: [String?] = []
         try await PageOCRStream.forEach(
             pdf: pdf,
             skipPagesWithText: skipPagesWithText,
             progress: progress
         ) { page in
-            try builder.addPage(json: OCRJSONEncoder.encode(page.ocr))
+            pageJSON.append(try OCRJSONEncoder.encode(page.ocr))
         }
-        try builder.finish(overlaying: originalData, to: url)
+
+        do {
+            try overlay(pageJSON, onto: originalData, to: url)
+        } catch {
+            // Retry with a PDFKit-normalized input for PDFs GhostLayer can't parse.
+            guard let normalized = pdf.dataRepresentation() else { throw error }
+            try overlay(pageJSON, onto: normalized, to: url)
+        }
+    }
+
+    private static func overlay(_ pageJSON: [String?], onto data: Data, to url: URL) throws {
+        let builder = OcrDocBuilder()
+        for json in pageJSON {
+            builder.addPage(json: json)
+        }
+        try builder.finish(overlaying: data, to: url)
     }
 
     private static func writeImageDoc(
