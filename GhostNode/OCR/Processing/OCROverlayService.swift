@@ -54,12 +54,13 @@ nonisolated enum OCROverlayService {
             try Task.checkCancellation()
             guard let png = image.data else { throw ImageBufferError.encodingFailed }
             let ocr = await OCRProcessor.processImage(data: png)
+            let mappedOcr = ocr?.applying(image.imageMapping)
             try builder.addPage(
                 image: png,
                 widthPx: UInt32(image.pixelWidth),
                 heightPx: UInt32(image.pixelHeight),
                 dpi: image.dpi,
-                json: OCRJSONEncoder.encode(ocr)
+                json: OCRJSONEncoder.encode(mappedOcr)
             )
             await progress?(OCRProgress(completed: index + 1, total: total))
         }
@@ -80,14 +81,16 @@ nonisolated enum OCROverlayService {
             skipPagesWithText: mode == .skip,
             progress: progress
         ) { page in
-            results.append(page.ocr)
+            results.append(page.overlayOCR)
         }
         return results
     }
 
     @concurrent
     static func recognize(image data: Data) async -> OCRResult? {
-        await OCRProcessor.processImage(data: data)
+        guard let ocr = await OCRProcessor.processImage(data: data) else { return nil }
+        guard let buffer = try? ImageBuffer(data: data) else { return ocr }
+        return ocr.applying(buffer.imageMapping)
     }
 
     private static func openPDF(_ data: Data) throws -> PDFDocument {
@@ -110,7 +113,7 @@ nonisolated enum OCROverlayService {
             skipPagesWithText: skipPagesWithText,
             progress: progress
         ) { page in
-            pageJSON.append(try OCRJSONEncoder.encode(page.ocr))
+            try pageJSON.append(OCRJSONEncoder.encode(page.overlayOCR))
         }
 
         do {
@@ -149,7 +152,7 @@ nonisolated enum OCROverlayService {
                 widthPx: rendered.widthPx,
                 heightPx: rendered.heightPx,
                 dpi: rendered.dpi,
-                json: OCRJSONEncoder.encode(page.ocr)
+                json: OCRJSONEncoder.encode(page.imageOCR)
             )
         }
         try builder.finish(to: url)

@@ -1,5 +1,5 @@
 {
-  "originHash" : "c4245097af7c3bc96e2b229f22256a03f43af0d4e343ebc5ac0fb588f420b1ad",
+  "originHash" : "f15af27a5e220cd9ea6e3b2921f94b6ecf3e4a4a6dd54668b375da476cd8f321",
   "pins" : [
     {
       "identity" : "flyingfox",
@@ -11,12 +11,12 @@
       }
     },
     {
-      "identity" : "ghost_layer",
+      "identity" : "ghostlayer",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/sevenautumns/ghost_layer",
+      "location" : "https://github.com/sevenautumns/GhostLayer",
       "state" : {
-        "revision" : "21ccf9a27e90186c1ec14f7e1c6bcc8407f1cb09",
-        "version" : "0.1.2"
+        "revision" : "518c45d90fcf926c9b8e7dbecaf9c5546c09ff97",
+        "version" : "0.2.0"
       }
     }
   ],
