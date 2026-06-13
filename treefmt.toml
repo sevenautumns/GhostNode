@@ -1,0 +1,22 @@
+[formatter.nixfmt]
+command = "nixfmt"
+includes = ["*.nix"]
+
+[formatter.taplo]
+command = "taplo"
+options = ["format"]
+includes = ["*.toml"]
+
+[formatter.ruff]
+command = "ruff"
+options = ["format"]
+includes = ["*.py"]
+
+[formatter.prettier]
+command = "prettier"
+includes = ["*.md"]
+
+[formatter.swiftformat]
+command = "swiftformat"
+options = ["--swiftversion", "6"]
+includes = ["*.swift"]
