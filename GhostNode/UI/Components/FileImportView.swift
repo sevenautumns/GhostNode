@@ -2,7 +2,7 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 enum FileImportHandler {
-    case pdf((Data) -> Void)
+    case pdf((Data, String?) -> Void)
     case images(([ImageBuffer]) -> Void)
 }
 
@@ -52,7 +52,7 @@ struct FileImportButton: View {
                     case let .pdf(onPDF):
                         guard let url = urls.first else { return }
                         let data = try FileImporter.loadPDF(url)
-                        onPDF(data)
+                        onPDF(data, url.deletingPathExtension().lastPathComponent)
                     case let .images(onImages):
                         var buffers: [ImageBuffer] = []
                         for url in urls {

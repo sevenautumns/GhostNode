@@ -1,5 +1,9 @@
 import SwiftUI
 
+#if os(macOS)
+    import AppKit
+#endif
+
 struct ScanFlowView: View {
     @EnvironmentObject private var vm: ScanFlowViewModel
 
@@ -127,7 +131,7 @@ struct ScanFlowView: View {
             FileImportButton(
                 label: "Import PDF",
                 systemImage: "doc",
-                handler: .pdf { vm.stagePDF($0) },
+                handler: .pdf { vm.stagePDF($0, name: $1) },
                 onError: { vm.report($0) }
             )
             .buttonStyle(.bordered)
@@ -158,6 +162,36 @@ struct ScanFlowView: View {
     }
 
     @ViewBuilder
+    private var saveButton: some View {
+        if let saved = vm.savedURL {
+            #if os(macOS)
+                Button {
+                    NSWorkspace.shared.activateFileViewerSelecting([saved])
+                } label: {
+                    Image(systemName: "folder")
+                }
+                .accessibilityLabel("Show in Finder")
+            #else
+                Image(systemName: "checkmark.circle.fill")
+                    .foregroundColor(.secondary)
+                    .accessibilityLabel("Saved")
+            #endif
+        } else {
+            Button {
+                vm.save()
+                #if os(macOS)
+                    if let saved = vm.savedURL {
+                        NSWorkspace.shared.activateFileViewerSelecting([saved])
+                    }
+                #endif
+            } label: {
+                Image(systemName: "square.and.arrow.down")
+            }
+            .accessibilityLabel("Save")
+        }
+    }
+
+    @ViewBuilder
     private func previewSheet(url: URL) -> some View {
         VStack(spacing: 0) {
             HStack {
@@ -166,6 +200,7 @@ struct ScanFlowView: View {
                 Text("Preview")
                     .fontWeight(.semibold)
                 Spacer()
+                saveButton
                 ShareButton(url: url)
             }
             .padding()
